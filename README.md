@@ -25,6 +25,8 @@ For backened part. I have built five micro services.
     Nutrition Backened is basically a Eureka netflix server which we use to deploy all are micro-services. It     itself is also a micro-services but we have deploy all are 4 mico services including API gateway.
 
 
+
+
 //FRONTEND (Angular) 
  * Try _npm install_ command first to install all the node module packages used in our project.
 
@@ -47,6 +49,8 @@ I) Components:
  6. Sign up : For sign up purpose.
 
 
+
+
 //DATABASE
 
 For the database part. I have used two databases.
@@ -54,6 +58,8 @@ For the database part. I have used two databases.
  1. mySql or mariaDB : I have used mariaDB database. It is similar to mySql. This database is used to store                          user's all basic information like sign up information and also during jwt                                    authentication part the login data(i.e username & password) is checked from the same                          database. 
  2. mongoDB : MongoDB is an open source NoSQL database management program. NoSQL is used as an alternative to               traditional relational databases. NoSQL databases are quite useful for working with large sets               of distributed data.
               So here I used mongoDB to store user's favourite item list.
+
+
 
 
 //EXTERNAL API'S
