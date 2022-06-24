@@ -1,0 +1,48 @@
+server:
+  port: 9000
+
+eureka:
+  instance:
+    hostname: localhost
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+      routes:
+        - id: nutrition-auth-server
+          uri: http://localhost:8080/
+          predicates:
+            - Path=/user/**
+        - id: nutrition-favourite
+          uri: http://localhost:8585/
+          predicates:
+            - Path=/food/**
+        - id: nutrition-api
+          uri: http://localhost:8090/
+          predicates:
+            - Path=/api/**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
