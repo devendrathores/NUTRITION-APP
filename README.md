@@ -1,6 +1,6 @@
 # NUTRITION-APP
 
-//BACKEND
+//BACKEND (Springboot)
 
 For backened part. I have built five micro services.
  1. Nutrition Server(port:8080)
@@ -23,3 +23,25 @@ For backened part. I have built five micro services.
      
  -> Nutrition Backened(port:8761)
     Nutrition Backened is basically a Eureka netflix server which we use to deploy all are micro-services. It     itself is also a micro-services but we have deploy all are 4 mico services including API gateway.
+
+
+//FRONTEND (Angular) 
+ * Try _npm install_ command first to install all the node module packages used in our project.
+
+For frontend part. I have used 6 components and 6 services.
+I) Components:
+ 1. Home : For the home purpose page.
+ 2. List-Food-Item : All the total food items will be shown in a format of list.
+ 3. List-Favourite-Item : All the favourite item marked by the user will be shown in a list.
+ 4. Login : For Login purpose page.
+ 5. Sign up : For  Signup purpose page.
+ 6. Navbar : For having a navbar in our all pages.
+II) Services:
+ 1. Auth-Interceptor : We used this class for Angular Interceptor. Angular Interceptor will basically takes                          the token and put it inside every request.
+ 2. Dummy-Guard : Angular guard is an interface which can be implemented to decide if a route can be                           activated.If all guards return true, navigation continues. If any guard returns false,                       navigation is cancelled.
+ 3. Favourite : To get favourite item data marked by user and communicate it to our springboot(backened).
+ 4. FoodItems : To communicate to our spring boot application (backened).
+ 5. Login : For login purpose.
+ 6. Sign up : For sign up purpose.
+
+
