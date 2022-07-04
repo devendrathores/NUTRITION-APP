@@ -57,7 +57,7 @@ For the database part. I have used two databases.
 
  1. mySql or mariaDB : I have used mariaDB database. It is similar to mySql. This database is used to store                          user's all basic information like sign up information and also during jwt                                    authentication part the login data(i.e username & password) is checked from the same                          database. The database is created by name _fooddb_. Under which the table name is _users_
  2. mongoDB : MongoDB is an open source NoSQL database management program. NoSQL is used as an alternative to               traditional relational databases. NoSQL databases are quite useful for working with large sets               of distributed data.
-              So here I used mongoDB to store user's favourite item list. The database is created by name _fooddb_. Under which the collection(table) name is favourite.
+              So here I used mongoDB to store user's favourite item list. The database is created by name _fooddb_. Under which the collection(table) name is _favourite_.
 
 
 
