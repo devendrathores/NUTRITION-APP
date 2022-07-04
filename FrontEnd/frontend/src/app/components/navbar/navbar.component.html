@@ -1,0 +1,48 @@
+<mat-toolbar style="background-color:#379683">
+  <!--href="" Every time page reloads ,routerLink="" Page didn't reloads-->
+    <a routerLink="/home" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>food_bank</mat-icon>
+    </a>
+    <span>Nutrition App</span>
+    <span class="example-spacer"></span>
+    <!--login-->
+    <a 
+    *ngIf="!loginService.isLoggedIn()"
+    routerLink="/login" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+     Login
+    </a>
+    <!--signup-->
+    <a 
+    *ngIf="!loginService.isLoggedIn()"
+    routerLink="/signup" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" style="margin-right: 20px;margin-left: 20px;">
+     Signup
+    </a>
+     <!--search-->
+    <span *ngIf="loginService.isLoggedIn() && currentUrl()=='/food'">
+    <input style="border-radius:4px;border-style:none;margin-right: 5px;"
+    #search type="search" placeholder="Search about your Foods" >
+    <button  routerLink="/food" (click)="getQuerry(search.value)" type="submit" style="margin-right:20px;background-color:rgb(219, 218, 218);border-radius:20px;border-style:none">Search</button> 
+    </span>
+    <!--Food-->
+    <a 
+    *ngIf="loginService.isLoggedIn()"
+    routerLink="/food" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" style="margin-right: 30px;">
+    <span *ngIf="currentUrl()=='/food'" style="font-size:20px;color:yellow">Food</span>
+    <span *ngIf="currentUrl()!='/food'" style="font-size:20px">Food</span>
+    </a>
+     <!--Favourite-->
+     <a style="text-decoration: none;"
+     *ngIf="loginService.isLoggedIn()"
+     routerLink="/favourite" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" style="margin-right: 100px">
+     <span *ngIf="currentUrl()=='/favourite'" style="font-size:20px;color:yellow">Favourite</span>
+     <span *ngIf="currentUrl()!='/favourite'" style="font-size:20px">Favourite</span>
+     </a>
+    <!--logout-->
+    <a 
+    (click)="logout()"
+    *ngIf="loginService.isLoggedIn()"
+    mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>logout</mat-icon>
+    </a>
+
+  </mat-toolbar>
